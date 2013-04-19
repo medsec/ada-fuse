@@ -38,11 +38,11 @@ Fuse.Aux             procedures for fs implementation
 Getting started
 ---------------
 
-Take a look at our [example filesystems](ada-fuse/tree/master/examples). In a
+Take a look at our [example filesystems](examples). In a
 nutshell, you have to instantiate Fuse.Main, write the functions you want to
 implement and register them. Then you can call the Main procedure, which mounts
 the filesystem. For a list of functions take a look at
-[fuse-main.ads](ada-fuse/blob/master/src/fuse-main.ads). As most of our
+[fuse-main.ads](src/fuse-main.ads). As most of our
 documentation is only about Ada-Fuse but not Fuse in general, you should also
 have a look into the [Fuse Wiki](http://sourceforge.net/apps/mediawiki/fuse)
 and their [API reference](http://fuse.sourceforge.net/doxygen/index.html). Also
@@ -108,3 +108,21 @@ Useful Links
 *   [Fuse-API reference](http://fuse.sourceforge.net/doxygen/index.html)
 *   [Writing a FUSE Filesystem: a Tutorial by Joseph J. Pfeiffer, Jr.,
     Ph.D.](http://www.cs.nmsu.edu/~pfeiffer/fuse-tutorial/)
+
+License
+-------
+Copyright (C) 2013 Benjamin Burse, Christopher Lübbemeier and Nicolai Ruckel
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
