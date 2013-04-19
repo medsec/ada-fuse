@@ -38,11 +38,11 @@ Fuse.Aux             procedures for fs implementation
 Getting started
 ---------------
 
-Take a look at our [example filesystems](ada-fuse/tree/master/examples). In a
+Take a look at our [example filesystems](examples). In a
 nutshell, you have to instantiate Fuse.Main, write the functions you want to
 implement and register them. Then you can call the Main procedure, which mounts
 the filesystem. For a list of functions take a look at
-[fuse-main.ads](ada-fuse/blob/master/src/fuse-main.ads). As most of our
+[fuse-main.ads](src/fuse-main.ads). As most of our
 documentation is only about Ada-Fuse but not Fuse in general, you should also
 have a look into the [Fuse Wiki](http://sourceforge.net/apps/mediawiki/fuse)
 and their [API reference](http://fuse.sourceforge.net/doxygen/index.html). Also
