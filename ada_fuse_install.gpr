@@ -1,0 +1,9 @@
+project Ada_Fuse is
+
+   for Source_Dirs      use ("../../include/ada_fuse");
+   for Library_Dir      use "../../lib/ada_fuse";
+   for Library_Name     use "ada_fuse";
+   for Library_Kind     use "static";
+   for Externally_Built use "true";
+
+end Ada_Fuse;

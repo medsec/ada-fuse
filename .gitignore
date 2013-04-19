@@ -1,0 +1,7 @@
+*.swp
+*.ali
+*.o
+*.a
+b~*
+tmp
+obj

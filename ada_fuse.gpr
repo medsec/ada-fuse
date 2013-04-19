@@ -1,0 +1,20 @@
+project Ada_Fuse is
+
+    type System_Type is ("Linux x86_64", "Linux i686", "Darwin i386", "Darwin x86_64");
+    System : System_type := external ("SYSTEM");
+
+    case System is
+        when "Linux x86_64" =>
+            for Source_Dirs use ("src", "src/system/linux64");
+        when "Linux i686" =>
+            for Source_Dirs use ("src", "src/system/linux32");
+        when "Darwin i386" | "Darwin x86_64" =>
+            for Source_Dirs use ("src", "src/system/macos");
+    end case;
+
+    for Library_Dir use "lib";
+    for Library_Name use "ada_fuse";
+    for Library_Kind use "static";
+    for Externally_Built use "true";
+
+end Ada_Fuse;

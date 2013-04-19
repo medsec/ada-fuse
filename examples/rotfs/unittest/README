@@ -1,0 +1,13 @@
+Basic tests for rotfs.
+For Testing you need to do following steps:
+
+1- make all                (rotfs will be compiled for you)
+2- make test               (the testsetup is compiled for you)
+3- ./rotfs_main from to    (mount rotfs)
+4- ./test_main             (run the test)
+
+To clean up after testing you can run:
+make clean_test
+
+To unount the filesystem you can run:
+fusermount -u to

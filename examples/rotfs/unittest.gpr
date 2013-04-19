@@ -1,0 +1,26 @@
+--with "../../ada_fuse";
+--with "florist";
+----with "/usr/lib/gnat/aunit";
+
+project unittest is
+
+    for Source_Dirs use ("unittest/src/", "/usr/include/aunit/framework/", "/usr/include/aunit/containers/", "/usr/include/aunit/framework/calendar/", "/usr/include/aunit/reporters/", "/usr/include/aunit/framework/nativememory/", "/usr/include/aunit/framework/fullexception/");
+	-- , "/usr/share/ada/adainclude/", "/usr/lib/gnat/"
+    for Languages use ("Ada");
+    for Exec_Dir use ".";
+    for Object_Dir use "unittest/obj/";
+    for Main use ("test_main.adb");
+
+    package Compiler is
+        for Default_Switches ("ada") use
+            ("-W", "-Wall", "-gnato", "-gnat2012", "-g", "-gnatn");
+    end Compiler;
+
+--    Fuse_Libs := external_as_list ("FUSE_LIBS", " ");
+--
+--    package Linker is
+--        for Default_Switches ("Ada") use
+--            Fuse_Libs;
+--    end Linker;
+
+end unittest;
