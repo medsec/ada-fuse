@@ -48,6 +48,7 @@ package Fuse.Main is
    package System is
       new Fuse.System
             (User_Data_Type,
+             IO.File_Type,
              File_Access);
 
    package General is
