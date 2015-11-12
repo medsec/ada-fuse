@@ -119,6 +119,7 @@ package Fuse.System is
 
 
    -- File_Info
+   -- Here we need some work to let the compiler know what File_Access is
 
    type File_Info_Type is record
       Flags       : Flags_Type;
