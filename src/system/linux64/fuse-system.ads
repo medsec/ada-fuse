@@ -7,7 +7,8 @@ with Ada.Unchecked_Conversion;
 generic
 
    type User_Data_Type is private;
-   type File_Access is private;
+   type File is limited private;
+   type File_Access is access File;
 
 package Fuse.System is
 
