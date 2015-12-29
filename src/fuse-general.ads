@@ -30,6 +30,8 @@ package Fuse.General is
      (Exc     : Ada.Exceptions.Exception_Occurrence) return Interfaces.C.Int;
 
    -- Context
+   function fuse_get_context return System.Context_Access;
+   pragma import (C, fuse_get_context);
    function Get_Context return System.Context_Type;
    function Get_User_Data return System.User_Data_Type;
 
@@ -64,10 +66,6 @@ private
      (Message : String);
 
    procedure Open_Log_File;
-
-   -- Context
-   function fuse_get_context return System.Context_Access;
-   pragma import (C, fuse_get_context);
 
    -- Fill Dir
    type Void is null record;

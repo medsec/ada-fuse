@@ -38,7 +38,7 @@ package Fuse.System is
          Data  : access User_Data_Type;
       end record;
 
-   type Context_Access is access Context_Type;
+   type Context_Access is access all Context_Type;
 
    pragma Convention (C, Context_Type);
    for Context_Type'Size use 24*8;
