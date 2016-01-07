@@ -242,6 +242,15 @@ package Fuse.System is
    S_IRWXO : constant St_Mode_Type :=                        --      8#7#
      (S_IROTH | S_IWOTH | S_IXOTH => true, others => false);
 
+   S_IRXU : constant St_Mode_Type :=                         --    8#600#
+     (S_IRUSR | S_IXUSR => true, others => false);
+
+   S_IRXG : constant St_Mode_Type :=                         --     8#60#
+     (S_IRGRP | S_IXGRP => true, others => false);
+
+   S_IRXO : constant St_Mode_Type :=                         --      8#6#
+     (S_IROTH | S_IXOTH => true, others => false);
+
    function Mode_T_to_St_Mode is new Ada.Unchecked_Conversion
      (Source => Mode_T,
       Target => St_Mode_Type);
