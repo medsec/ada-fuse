@@ -162,7 +162,7 @@ package Fuse.Main is
 
       with function MkDir
         (Path      :     in String;
-         Mode      :     in Natural)
+         Mode      :     in System.St_Mode_Type)
          return System.Error_Type is <>;
 
    package MkDir is private

@@ -113,7 +113,7 @@ package body Fuse.Main is
             return Interfaces.C.int
        is begin
            return General.Error_Code (MkDir
-           (Interfaces.C.Strings.Value(Path), Natural(Mode)));
+           (Interfaces.C.Strings.Value(Path), System.Mode_T_To_St_Mode (Mode)));
        exception when Error : others =>
                return General.Handle_Exception (Error);
        end MkDir_C;
