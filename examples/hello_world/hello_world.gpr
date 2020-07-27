@@ -13,11 +13,8 @@ project Hello_World is
             ("-W", "-Wall", "-gnato", "-gnat2012", "-g", "-gnatn");
     end Compiler;
 
-    Fuse_Libs := external_as_list ("FUSE_LIBS", " ");
-
     package Linker is
-        for Default_Switches ("Ada") use
-            Fuse_Libs;
+       for Default_Switches ("Ada") use (Ada_Fuse.Fuse_Libs);
     end Linker;
 
 end Hello_World;
