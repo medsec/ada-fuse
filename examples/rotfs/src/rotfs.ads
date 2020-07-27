@@ -52,7 +52,7 @@ package RotFS is
 
    function MkDir
      (Path   : in String;
-      Mode   : in Natural)
+      Mode   : in System.St_Mode_Type)
       return System.Error_Type;
 
    package Rot_MkDir is new Fuse_Rot.MkDir;
