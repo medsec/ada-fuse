@@ -1,7 +1,7 @@
 project Ada_Fuse is
 
     type System_Type is ("Linux x86_64", "Linux i686", "Darwin i386", "Darwin x86_64");
-    System : System_type := external ("SYSTEM");
+    System : System_type := external ("ADA_FUSE_SYSTEM");
 
     case System is
         when "Linux x86_64" =>

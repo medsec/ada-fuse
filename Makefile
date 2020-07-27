@@ -1,19 +1,19 @@
-SYSTEM := $(shell uname -sm)
-export SYSTEM
+ADA_FUSE_SYSTEM := $(shell uname -sm)
+export ADA_FUSE_SYSTEM
 
-ifeq ($(SYSTEM),Linux x86_64)
+ifeq ($(ADA_FUSE_SYSTEM),Linux x86_64)
 	SYS_DIR=system/linux64
 endif
 
-ifeq ($(SYSTEM),Linux i686)
+ifeq ($(ADA_FUSE_SYSTEM),Linux i686)
 	SYS_DIR=system/linux32
 endif
 
-ifeq ($(SYSTEM),Darwin i386)
+ifeq ($(ADA_FUSE_SYSTEM),Darwin i386)
 	SYS_DIR=system/macos
 endif
 
-ifeq ($(SYSTEM),Darwin x86_64)
+ifeq ($(ADA_FUSE_SYSTEM),Darwin x86_64)
 	SYS_DIR=system/macos
 endif
 
