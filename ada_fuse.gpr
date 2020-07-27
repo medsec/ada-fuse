@@ -23,4 +23,6 @@ project Ada_Fuse is
             ("-W", "-Wall", "-gnato", "-gnat2012", "-g", "-gnatn");
     end Compiler;
 
+    Fuse_Libs := external ("FUSE_LIBS", "-lfuse");
+
 end Ada_Fuse;
