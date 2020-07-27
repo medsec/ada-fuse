@@ -19,10 +19,10 @@ endif
 
 
 all:
-	gprbuild -p -f -Pada_fuse_build
+	gprbuild -p -f -Pada_fuse
 
 clean:
-	gprclean -Pada_fuse_build >/dev/null
+	gprclean -Pada_fuse >/dev/null
 	rm obj/* lib/* 2>/dev/null || true
 
 
