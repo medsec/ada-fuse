@@ -12,9 +12,15 @@ project Ada_Fuse is
             for Source_Dirs use ("src", "src/system/macos");
     end case;
 
+    for Languages use ("Ada");
+    for Object_Dir use "obj";
     for Library_Dir use "lib";
     for Library_Name use "ada_fuse";
     for Library_Kind use "static";
-    for Externally_Built use "true";
+
+    package Compiler is
+        for Default_Switches ("ada") use
+            ("-W", "-Wall", "-gnato", "-gnat2012", "-g", "-gnatn");
+    end Compiler;
 
 end Ada_Fuse;
