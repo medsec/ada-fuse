@@ -1,0 +1,11 @@
+["0.0.0"]
+origin = "file://.."
+[general]
+description = "Shiny new project"
+maintainers = [
+"your@email.here",
+]
+maintainers-logins = [
+"github-username",
+]
+

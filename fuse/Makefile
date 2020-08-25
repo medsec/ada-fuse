@@ -23,7 +23,7 @@ all:
 
 clean:
 	gprclean -Pada_fuse >/dev/null
-	rm -rf obj lib
+	rm obj/* lib/* 2>/dev/null || true
 
 # Install directory
 prefix ?= $(shell which gprbuild 2> /dev/null | sed -e 's/\/bin\/gprbuild.*//')
