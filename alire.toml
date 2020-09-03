@@ -28,8 +28,8 @@ windows = false
 '...'   = false
 
 [origin]
+# This has to be updated before submitting to Alire Index
 url = "git+https://github.com/medsec/ada-fuse"
-commit = "af2d0ac124289f39cf0d5361f01bab445f165911"
 
 [origin.depends-on]
 libfuse = "^2.0.0"
