@@ -13,4 +13,4 @@ obj
 lib
 *_main
 ada-fuse/.git
-alire/build/*
+alire/*
