@@ -1,5 +1,5 @@
 name = "Ada-Fuse"
-version = "1.0.0"
+version = "1.0.1"
 description = "Ada bindings for Fuse (Filesystem in Userspace)"
 website = "https://github.com/medsec/ada-fuse"
 authors  = [
