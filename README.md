@@ -4,6 +4,8 @@ Ada-Fuse
 Ada-Fuse provides Ada bindings for Fuse. Our goal was to make it possible to
 use the Fuse operations with Ada-like types and functions.
 
+You can install it with [Alire](https://alire.ada.dev).
+
 You can use most of the Fuse operations. The missing operations are `lock`,
 `utimens`, `bmap`, `ioctl` and `poll`. For most file systems this should not be
 a problem, in fact we never saw a Fuse-Filesystem using these operations. Be
@@ -103,21 +105,3 @@ Useful Links
 * [Fuse-API reference](http://fuse.sourceforge.net/doxygen/index.html)
 * [Writing a FUSE Filesystem: a Tutorial by Joseph J. Pfeiffer, Jr.,
   Ph.D.](http://www.cs.nmsu.edu/~pfeiffer/fuse-tutorial/)
-
-License
--------
-Copyright (C) 2013 Benjamin Burse, Christopher Lübbemeier and Nicolai Ruckel
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program. If not, see <http://www.gnu.org/licenses/>.
-
