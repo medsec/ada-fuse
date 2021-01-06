@@ -12,3 +12,5 @@ jobs:
           distrib: fsf
           target: native
       - run: make
+      - run: make test
+        
