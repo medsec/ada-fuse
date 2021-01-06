@@ -11,7 +11,7 @@ jobs:
         with:
           distrib: fsf
           target: native
-      - run: sudo apt-get install fuse-dev
+      - run: sudo apt-get -y install libfuse3-dev
       - run: make
       - run: make test
         
