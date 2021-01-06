@@ -1,14 +1,15 @@
+with "libfuse";
 project Ada_Fuse is
 
-    type System_Type is ("Linux x86_64", "Linux i686", "Darwin i386", "Darwin x86_64");
-    System : System_type := external ("ADA_FUSE_SYSTEM");
+    type System_Type is ("Linux_x86_64", "Linux_i686", "Darwin_i386", "Darwin_x86_64");
+    System : System_type := external ("ADA_FUSE_SYSTEM","Linux_x86_64");
 
     case System is
-        when "Linux x86_64" =>
+        when "Linux_x86_64" =>
             for Source_Dirs use ("src", "src/system/linux64");
-        when "Linux i686" =>
+        when "Linux_i686" =>
             for Source_Dirs use ("src", "src/system/linux32");
-        when "Darwin i386" | "Darwin x86_64" =>
+        when "Darwin_i386" | "Darwin_x86_64" =>
             for Source_Dirs use ("src", "src/system/macos");
     end case;
 
@@ -27,7 +28,5 @@ project Ada_Fuse is
         for Default_Switches ("ada") use
             ("-W", "-Wall", "-gnato", "-gnat2012", "-g", "-gnatn");
     end Compiler;
-
-    Fuse_Libs := external ("FUSE_LIBS", "-lfuse");
 
 end Ada_Fuse;
