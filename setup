@@ -1,7 +1,8 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import subprocess
 from os.path import *
 import shutil
+
 TEMPLATE="""abstract project Libfuse is
    package Linker is
       for Linker_Options use (%(libs)s);
