@@ -1,3 +1,4 @@
+with "libfuse";
 project Ada_Fuse is
 
     type System_Type is ("Linux_x86_64", "Linux_i686", "Darwin_i386", "Darwin_x86_64");
@@ -27,7 +28,5 @@ project Ada_Fuse is
         for Default_Switches ("ada") use
             ("-W", "-Wall", "-gnato", "-gnat2012", "-g", "-gnatn");
     end Compiler;
-
-    Fuse_Libs := external ("FUSE_LIBS", "-lfuse");
 
 end Ada_Fuse;

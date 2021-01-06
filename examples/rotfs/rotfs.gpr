@@ -13,8 +13,4 @@ project RotFS is
             ("-W", "-Wall", "-gnato", "-gnat2012", "-g", "-gnatn");
     end Compiler;
 
-    package Linker is
-       for Default_Switches ("Ada") use (Ada_Fuse.Fuse_Libs);
-    end Linker;
-
 end RotFS;

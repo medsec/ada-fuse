@@ -1,7 +1,5 @@
 SYSTEM := $(shell uname -sm)
-FUSE_LIBS := $(shell pkg-config --libs fuse)
 export SYSTEM
-export FUSE_LIBS
 
 # targets for filesystem
 #------------------------------
@@ -18,7 +16,7 @@ clean:
 
 test:
 	gprbuild -p -f -Punittest
-
+	./test_main
 clean_test: 
 	gprclean -Punittest >/dev/null
 	rm -r unittest/obj/* 2>/dev/null || true
