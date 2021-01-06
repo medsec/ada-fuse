@@ -36,7 +36,6 @@ package body Fuse.Main is
             Size    : Interfaces.C.Size_T)
             return Interfaces.C.int
        is
-          use type System.Error_Type;
           Link_String : String (1 .. Integer (Size) - 1);
           String_Size : Natural;
           Ret : System.Error_Type;
@@ -1035,7 +1034,7 @@ end StatFS_C;
 
       pragma Import (C, Fuse_Main_C, "fuse_main_real");
 
-      Argv : Argv_Access := new Argv_Type;
+      Argv : constant Argv_Access := new Argv_Type;
       Data : constant User_Data_Access := new User_Data_Type'(User_Data);
 
       use type Interfaces.C.int;
