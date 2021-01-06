@@ -1,10 +1,16 @@
 --with "../../ada_fuse";
 --with "florist";
-----with "/usr/lib/gnat/aunit";
+with "aunit.gpr";
 
 project unittest is
 
-    for Source_Dirs use ("unittest/src/", "/usr/include/aunit/framework/", "/usr/include/aunit/containers/", "/usr/include/aunit/framework/calendar/", "/usr/include/aunit/reporters/", "/usr/include/aunit/framework/nativememory/", "/usr/include/aunit/framework/fullexception/");
+   for Source_Dirs use ("unittest/src/");
+   --  for Source_Dirs use project'Source_Dirs & ("/usr/include/aunit/framework/",
+   --                                             "/usr/include/aunit/containers/",
+   --                                             "/usr/include/aunit/framework/calendar/",
+   --                                             "/usr/include/aunit/reporters/",
+   --                                             "/usr/include/aunit/framework/nativememory/",
+   --                                             "/usr/include/aunit/framework/fullexception/");
 	-- , "/usr/share/ada/adainclude/", "/usr/lib/gnat/"
     for Languages use ("Ada");
     for Exec_Dir use ".";

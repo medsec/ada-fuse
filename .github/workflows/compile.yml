@@ -11,4 +11,8 @@ jobs:
         with:
           distrib: fsf
           target: native
+      - run: sudo apt-get update
+      - run: sudo apt-get -y install libfuse-dev libaunit*-dev
       - run: make
+      - run: make test
+        
